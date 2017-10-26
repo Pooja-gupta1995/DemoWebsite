@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <?php
+include'insert.php';
+include'register.php' 
+?>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Shashtra</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link href="css/animate.min.css" rel="stylesheet"> 
+	<link href="css/animate.css" rel="stylesheet" />
+	<link href="css/prettyPhoto.css" rel="stylesheet"> 
+	<link href="css/style.css" rel="stylesheet">
+
+
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="shashtra.css">
+
+
+   <script src='https://www.google.com/recaptcha/api.js'></script>
+  
+  </head>
+  <body>
+  <form action="register.php" method="post">
+  <div class="navbar navbar-default navbar-fixed-top">
+				<div class="container">
+					<div class="navbar-header">
+					  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>                        
+					  </button>
+					  
+					  <a class="navbar-brand" href="hello.html"><h1><center>SHASHTRA 2017 </center></h1>
+					</div>
+
+
+					<div class="collapse navbar-collapse" id="myNavbar" style="padding-top: 100px;">
+						<ul class="nav navbar-nav navbar-right">
+							
+							  <li><a href="#about"><b>ABOUT</b></a></li>
+							  <li><a href="#facilities"><b>SPOTLIGHT</b></a></li>
+							  <li><a href="#messages"><b>HOSPITALITY</b></a></li>
+							  <li><a href="notf.html"><b>SHOWS</b></a></li>
+							  
+							  <li><a href="hostel.html"><b>SUBMIT</b></a></li>
+							  <li><a href="#contact"><b>Contact</b></a></li>
+							  <li><a href="#myModal" role="button" data-toggle="modal" ><b>Register/Login</b></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+
+<!--Modal Login Regulations --> 
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" >
+            <div class="modal-dialog modal-lg" >
+                <div class="modal-content" >
+                    <div class="modal-header">
+                            <div class="col-sm-11"></div>
+                            <div class="col-sm-1">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="margin-left: 50px;">×</button>   </div>
+                        <h4 class="modal-title" id="myModalLabel" style="font-size: 30px; color:rgb(0, 10, 134);"> <strong>Login/Registration </strong></h4>
+                    </div>
+                    <div class="modal-body">
+                            <div class="row">
+                            <!-- <div class="col-md-8" style="border-right: 1px dotted #C2C2C2;padding-right: 30px;">-->
+    
+                        <!-- Nav tabs -->
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a href="#Login" data-toggle="tab">Login</a></li>
+                                    <li><a href="#Registration" data-toggle="tab">Registration</a></li>
+                                </ul>
+    
+                        <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="Login" style="margin-right: 10px;margin-top: 10px;">
+									<form role="form" class="form-horizontal" action="test.php" target="_BLANK" method="POST">
+                                         <form role="form" class="form-horizontal" action="insert.php" target="_BLANK" method="POST">
+                                            <div class="form-group">
+                                                <label for="email" class="col-sm-2 control-label">username</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" placeholder="User"  required="required" autocomplete="on" name="user" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputPassword1" class="col-sm-2 control-label">password</label>
+                                                <div class="col-sm-10">
+                                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required="required" name="pass" />
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-2">
+                                                </div>
+                                                <div class= "col-sm-10">
+												<div class="g-recaptcha" data-sitekey="6Le9SC4UAAAAAClZUcuuZH0qPgVS2v5cyvxzOhl3"></div>
+                                                    <button type="submit" onclick="insert.php" class="btn btn-primary btn-sm" style="font-size: 17px; text-align: left; margin-left: 0px; color:rgb(154, 132, 255);">Submit</button>
+                                                    <a href="javascript:;" style="margin-left: 20px;">Forgot your password?</a>
+                                                </div>
+                                                
+                                            </div>
+                                        </form>
+                                    </div>
+									
+                                  </form>
+								  
+                                    <div class="tab-pane" id="Registration" style="margin-right: 10px; margin-top: 10px;">
+                                        <form role="form" class="form-horizontal" action="register.php" target="_BLANK" method="POST">
+                                            <div class="form-group">
+											
+                                                <label for="email" class="col-sm-2 control-label">Name</label>
+                                                <div class="col-sm-10">
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <input class="form-control" type="text" value="Ms."  disabled="disabled" name="name" />
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <input type="text" class="form-control" placeholder="Name" name="regname" required="required" style="background-color: rgb(172, 229, 255);" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email" class="col-sm-2 control-label">Institution</label>
+                                                <div class="col-sm-10">
+                                                    <div class="row">
+                                                        <div class="col-md-9">
+                                                            <input type="text" class="form-control" placeholder="College Name" equired="required" name="institution"  style="background-color: rgb(172, 229, 255);" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+											
+                                            <div class="form-group">
+                                                <label for="email" class="col-sm-2 control-label">Course</label>
+                                                <div class="col-sm-10">
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <select style="background-color: rgb(172, 229, 255);"class="form-control" required="required" name="course">
+                                                                <option>B.Tech IT</option>
+																<option>B.Tech ECE</option>
+																<option>B.Tech MEchanical</option>
+																<option>B.Tech Civil</option>
+																<option>B.Tech CSE</option>
+                                                               
+                                                                <option>MCA</option>
+                                                                                                            
+                                                                <option>B.Arch</option>
+                                                            </select>
+                                                        </div>
+                                                       <div class="col-md-3">
+																<select style="background-color: rgb(172, 229, 255);"class="form-control" required="required" name="regbranch">
+                                                                <option>2017</option>
+																<option>2018</option>
+																<option>2019</option>
+																<option>2020</option>
+																<option>2021</option>
+                                                               
+                                                                <option>2022</option>
+                                                                                                            
+                                                                <option>2013</option>
+                                                            </select>
+                                                                                                                   
+														   </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email" class="col-sm-2 control-label">Email</label>
+                                                <div class="col-sm-10">
+                                                    <input type="email" name="email" class="form-control" id="email" placeholder="Email" required="required" style="background-color: rgb(172, 229, 255);"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="mobile" class="col-sm-2 control-label">Contact Number</label>
+                                                <div class="col-sm-10">
+                                                    <input type="number" maxlength="10" name="contact" class="form-control" id="mobile" placeholder="Mobile" required="required" style="background-color: rgb(172, 229, 255);"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="password" class="col-sm-2 control-label">Password</label>
+                                                <div class="col-sm-10">
+                                                    <input type="password" name="password" class="form-control" id="password" placeholder="Password" required="required" style="background-color: rgb(172, 229, 255);" />
+                                                </div>
+                                            </div>
+											<div class="form-group">
+                                                <label for="email" class="col-sm-2 control-label">What does Taranagana mean to you</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" placeholder="What does Taranagana mean to you"  required="required" autocomplete="on" name="meaning" style="background-color: rgb(172, 229, 255);" />
+                                                </div>
+                                            </div>
+             <label for="email" class="col-sm-2 control-label">Team Preferance</label><b>Web Development<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="team[]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Content And Media</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="team[]" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Event Management</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="team[]">
+                                              
+                                            
+                                            <div class="row">
+                                                <div class="col-sm-2">
+								
+                                                </div>
+                                                <div class="col-sm-6">
+												<button type="submit" name="submit" onclick="register.php" class="btn btn-primary btn-sm" style="font-size: 17px; text-align: left; margin-left: 0px; color:rgb(154, 132, 255);">Submit</button>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="font-size: 17px; text-align: left; color:rgb(154, 132, 255); margin-left: 120px;"><strong>Cancel</strong></button>
+                                                    
+
+                                                    <!--<button type="button" class="btn btn-default btn-sm">Cancel</button>-->
+                                                
+                                                </div>
+                                            </div>
+											
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+    <!--END OF MODAL -->
+
+	<footer id="footer" class="midnight-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+					<div class="text-center">
+						<a href="#home" class="scrollup"><i class="fa fa-angle-up fa-3x"></i></a>
+					</div>
+                  
+
+                </div>
+				
+                
+			</div>
+		</div>
+    </footer><!--/#footer-->
+	
+	</form>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="js/jquery.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script> 
+	<script src="js/wow.min.js"></script>
+	<script src="js/jquery.easing.min.js"></script>	
+    <script src="https://maps.google.com/maps/api/js?sensor=true"></script>
+	<script src="js/main.js"></script>
+    <script src="contactform/contactform.js"></script>
+    
+</body>
+</html>
